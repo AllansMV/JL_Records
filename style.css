@@ -51,10 +51,18 @@ header {
     margin: 0rem 2rem;
 }
 
+.portada_disco {
+    margin: 2rem 2rem;
+}
+
+.portada_disco>img {
+    width: 100%;
+}
+
 
 #info {
     color: #130a94;
-    line-height: 2rem;
+    line-height: 1.5rem;
 }
 
 .grid {
