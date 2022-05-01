@@ -9,6 +9,7 @@
     --color2: #34fff8;
     --color3:white;
     --color4: #0e0950;
+    --color5: #ffa033;
     --fuenteh1: 'Poppins', sans-serif;
 }
 
@@ -16,7 +17,7 @@ body {
     background-color: var(--color3);
 }
 
-header {
+/* header {
     background-color: var(--color4);
     width: 100%;
     height: 50px;
@@ -27,22 +28,76 @@ header {
     position: fixed;
     top: 0;
 
+} */
+
+.header {
+    background-color: var(--color4);
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 
-
-.nav-bar img {
+.header img {
     display: block;
     margin: auto;
     inline-size: 35px;
     block-size: auto;
+    padding: 1rem 0;
 }
+
+.redes {
+    background-color: var(--color3);
+    width: auto;
+    height: auto;
+
+    position: sticky;
+    float: right;
+    top: 4rem;
+    border-radius: 12px;
+}
+
+.redes button {
+    display: block;
+    margin: auto;
+
+    inline-size: 32px;
+    block-size: 32px;
+    border:none;
+    cursor: pointer;
+    margin: 8px;
+    border-radius: 15px;
+}
+
+#whatsapp{
+    background-image: url(https://cdn-icons-png.flaticon.com/512/134/134937.png);
+    background-color: transparent;
+    background-size: contain;
+}
+#facebook {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/avi-webpage.appspot.com/o/iconos%2Ffacebook.svg?alt=media&token=d819de39-536a-4486-b769-e346d5ee3a78);
+    background-size:contain;
+    background-color: transparent;
+}
+#instagram {
+    background-image: url(https://cdn.pixabay.com/photo/2021/06/15/12/17/instagram-6338401_960_720.png);
+    background-color: transparent;
+    background-size: contain;
+}
+#email {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/avi-webpage.appspot.com/o/iconos%2Fgmail.svg?alt=media&token=89fbb1e5-30e8-4711-aca3-0a1c2f97aae2);
+    background-size:contain;
+    background-color: transparent;
+}
+
+
+
 
 .section_1 h1 {
     font-family: var(--fuenteh1);
     font-weight: 500;
     text-align: center;
     font-size: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
     color: var(--color4);
 }
@@ -53,11 +108,20 @@ header {
 
 .portada_disco {
     margin: 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-gap: 10px;
+    
 }
 
 .portada_disco img {
     width: 100%;
+    display: block;
+    margin: auto;
 }
+
+
 
 
 #info {
@@ -103,6 +167,7 @@ header {
     grid-template-columns:  repeat(3, 1fr);
     grid-template-rows: auto;
     grid-gap: 1em;
+    width: 95%;
 }
 
 .videos h2 {
@@ -124,21 +189,22 @@ header {
 }
 
 .politicas {
-    width: auto;
     padding: 3rem 2rem;
     line-height: 2rem;
     text-align: justify;
+    display: block;
 
 }
 
-.politicas h2 {
+/* .politicas h2 {
     color: var(--color4);
     font-weight: 400;
     margin: 2rem 0;
-}
+} */
 
 .politicas p {
     color: #130a94;
+    font-size: 15px;
 }
 
 #subrayado {
@@ -151,15 +217,26 @@ footer {
     background-color: var(--color1);
     height: 3rem;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+
+    width: 100%;
 }
 
 
 @media (max-width: 768px) {
+
+    .section_1 {
+        width: 100%;
+    }
     .section_2 {
-        grid-template-columns: repeat(1, 1fr);    
+        grid-template-columns: repeat(1, 1fr);
+        width: 85%;
+    }
+
+    .portada_disco {
+        grid-template-columns: repeat(1 , 1fr);
     }
 
     .videos div {
@@ -179,3 +256,4 @@ footer {
         height: auto;
     }
 }
+
